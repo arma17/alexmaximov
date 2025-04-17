@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- Определяет тип документа как HTML5 -->
+<html lang="ru"> <!-- Начало HTML-документа с указанием языка (русский) -->
+<head>
+    <meta charset="UTF-8"> <!-- Устанавливает кодировку документа на UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Настройки для адаптивного дизайна на мобильных устройствах -->
+    <title>Alex Maximov</title> <!-- Заголовок страницы, отображаемый в вкладке браузера -->
+    <link rel="stylesheet" href="style.css"> <!-- Подключение внешнего CSS-файла для стилизации страницы -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Inter -->
+</head>
+<body>
+    <header> <!-- Начало заголовка страницы -->
+        <div class="logo">
+            <img src="image/Logo.svg" alt="Логотип" /> <!-- Используем логотип из папки image -->
+        </div> <!-- Блок для логотипа -->
+        <nav> <!-- Начало навигационного меню -->
+            <a href="#" class="menu-item">Обо мне</a> <!-- Ссылка на раздел "Обо мне" -->
+        </nav> <!-- Конец навигационного меню -->
+    </header> <!-- Конец заголовка страницы -->
+
+    <div class="container"> <!-- Контейнер для меню и галереи -->
+        <div class="info-contacts"> <!-- Новый контейнер для информации и контактов -->
+            <div class="info"> <!-- Блок для информации -->
+                <h2>Работы</h2> <!-- Заголовок для информации -->
+                
+                <div class="info-websites"> <!-- Новый блок для сайтов -->
+                    <p16>Сайты</p16>
+                    <a href="#" class="gallery-item" data-target="icl-services">ICL Services</a>
+                    <a href="#" class="gallery-item" data-target="other-service">Горизонт покрытий</a>
+                </div>
+
+                <div class="info-presentations"> <!-- Новый блок для презентаций -->
+                    <p16>Презентации</p16>
+                    <a href="#" class="gallery-item" data-target="other-service">Другой сервис</a>
+                </div>
+            </div>
+
+            <div class="contacts"> <!-- Блок для контактов -->
+                <h2>Контакты</h2> <!-- Заголовок для контактов -->
+                <p16>Telegram</p16> <!-- Текст вместо плейсхолдера -->
+                <p16>mailtomaximov@gmail.com</p16> <!-- Текст вместо плейсхолдера -->
+            </div>
+        </div>
+
+        <div class="gallery-description-container" id="icl-services"> <!-- Контейнер для ICL Services -->
+            <div class="gallery">
+                <img src="image/ICL.png" alt="Изображение из галереи" />
+            </div>
+            <div class="separator"></div> <!-- Новый div для линии -->
+            <div class="description">
+                <div class="description-header">
+                    <h1>ICL Services</h1>
+                    <div>
+                        <button class="button-description">Landing page</button>
+                        <button class="button-description">Concept</button>
+                        <button class="button-description">SMM</button>
+                    </div>
+                </div>
+                <p18>Кейс выполнен в рамках работы 
+                    <br>в агенстве Papper Planes</p18> <!-- Описание проекта -->
+            </div>
+        </div>
+
+        <div class="gallery-description-container hidden" id="other-service"> <!-- Контейнер для другого сервиса -->
+            <div class="gallery">
+                <img src="image/Gorizont.png" alt="Изображение другого сервиса" />
+            </div>
+            <div class="separator"></div> <!-- Новый div для линии -->
+            <div class="description">
+                <div class="description-header">
+                    <h1>Горизонт покрытий</h1>
+                    <div>
+                        <button class="button-description">Landing page</button>
+                        <button class="button-description">Concept</button>
+                    </div>
+                </div>
+                <p18>Кейс выполнен в рамках работы 
+                    <br>в агенстве Papper Planes</p18> <!-- Описание проекта -->
+            </div>
+        </div>
+    </div>
+
+    <div class="about-me-container">
+        <div class="about-me-content">
+            <h1>Обо мне</h1>
+            <p18>Привет! Я Александр Максимов — дизайнер интерфейсов с опытом более 7 лет.
+                <br>Работаю в агентстве Papper Planes, создаю удобные и красивые сайты.</p18>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Подключение внешнего JavaScript-файла для функциональности страницы -->
+</body>
+</html>

@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box; /* padding и border не увеличивают размер элемента */
+}
+
+html, body {
+    height: 100%; /* Устанавливает высоту html и body на 100% */
+    margin: 0; /* Убирает отступы вокруг body */
+    font-size: 16px; /* Базовый размер шрифта */
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff; /* Устанавливает белый фон для всего сайта */
+}
+ h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -2px;
+    color: #121212;
+    padding-right: 32px;
+    line-height: 100%;
+ }
+ h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    letter-spacing: -1px;
+    color: #121212;
+    padding-bottom: 32px;
+ }
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+p18 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #919191;
+    line-height: 135%; 
+    letter-spacing: -0,8px;
+
+}
+
+p16 {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #919191; 
+    line-height: 145%;
+    letter-spacing: -0,6px;
+    width: 100%;
+
+}
+
+.gallery-item {
+    text-decoration: none; /* Убирает подчеркивание у ссылок в меню */
+    color: #919191; /* Устанавливает цвет текста для активных пунктов меню */
+}
+
+.gallery-item.active {
+    color: #121212; /* Черный цвет для активного элемента */
+    text-decoration: underline; /* Подчеркивание для активного элемента */
+}
+
+.gallery-item.inactive {
+    color: #919191; /* Серый цвет для неактивного элемента */
+    text-decoration: none; /* Убирает подчеркивание для неактивного элемента */
+}
+
+header {
+    display: flex; /* Использует flexbox для расположения элементов в строку */
+    justify-content: space-between; /* Распределяет пространство между элементами (логотип и навигация) */
+    align-items: center; /* Выравнивает элементы по центру по вертикали */
+    padding: 10px 40px; /* Устанавливает внутренние отступы (сверху/снизу и слева/справа) */
+    background-color: transparent; /* Устанавливает прозрачный фон для заголовка */
+    border-bottom: 1px solid #121212; /* Добавляет подчеркивание снизу хедера */
+    height: 70px;
+}
+
+nav {
+    display: flex; /* Использует flexbox для расположения пунктов меню в строку */
+    gap: 20px; /* Устанавливает отступ между пунктами меню */
+    margin-left: auto; /* Прижимает навигацию вправо */
+}
+
+.menu-item {
+    position: relative; /* Устанавливаем относительное позиционирование для псевдоэлемента */
+    text-decoration: none; /* Убирает подчеркивание у ссылок в меню */
+    color: #121212; /* Устанавливает цвет текста для пунктов меню */
+}
+
+.menu-item::before {
+    content: ""; /* Создает пустой контент для псевдоэлемента */
+    display: block; /* Устанавливает блочный элемент */
+    width: 32px; /* Ширина линии */
+    height: 1px; /* Длина линии */
+    background-color: #121212; /* Цвет линии */
+    position: absolute; /* Абсолютное позиционирование */
+    left: -44px; /* Расположение линии слева от пункта меню */
+    top: 50%; /* Центрирование линии по вертикали */
+    transform: translateY(-50%); /* Центрирование линии по вертикали */
+}
+
+.logo {
+    padding-top: 6px;
+    position: relative; /* Устанавливаем относительное позиционирование для логотипа */
+}
+
+.logo::after {
+    content: ""; /* Создает пустой контент для псевдоэлемента */
+    display: block; /* Устанавливает блочный элемент */
+    width: 32px; /* Длина линии (ширина) */
+    height: 1px; /* Ширина линии (высота) */
+    background-color: #121212; /* Цвет линии */
+    position: absolute; /* Абсолютное позиционирование */
+    right: -44px; /* Расположение линии справа от логотипа с расстоянием 12px */
+    top: 50%; /* Центрирование линии по вертикали */
+    transform: translateY(-50%); /* Центрирование линии по вертикали */
+}
+
+.about-me-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #ffffff;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+}
+
+.about-me-container.visible {
+    transform: translateY(0); /* Конечное положение - полностью виден */
+}
+
+.about-me-content {
+    padding: 40px;
+    height: 100%;
+    overflow-y: auto;
+    margin: 0 auto; /* Центрируем контент */
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 70px);
+    transition: opacity 0.3s ease;
+}
+
+.info-contacts {
+    display: flex; /* Использует flexbox для расположения элементов в строку */
+    flex-direction: column; /* Устанавливает вертикальное направление для элементов */
+    height: 100%; /* Устанавливает высоту на 100% родительского элемента */
+    padding: 40px 40px;
+    background-color: #ffffff; /* Цвет фона для меню (можно изменить) */
+    border-right: 1px solid #121212; /* Добавляет подчеркивание снизу хедера */
+    width: 20%;
+}
+
+.info {
+    display: flex; /* Использует flexbox для расположения элементов в строку */
+    flex-direction: column; /* Устанавливает вертикальное направление для элементов */
+    height: 100%; /* Устанавливает высоту на 100% родительского элемента */
+}
+
+.contacts {
+    display: flex; /* Использует flexbox для расположения элементов в строку */
+    flex-direction: column; /* Устанавливает вертикальное направление для элементов */
+}
+
+.gallery-description-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gallery {
+    height: 75%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%; /* Устанавливает ширину изображения на 100% родительского элемента */
+    height: 100%; /* Устанавливает высоту изображения на 100% родительского элемента */
+    object-fit: cover; /* Изображение будет обрезано, чтобы заполнить контейнер */
+}
+
+.separator {
+    width: 100%; /* Ширина на весь контейнер */
+    height: 1px; /* Высота линии 1px */
+    background-color: #121212; /* Черный цвет */
+}
+
+.description {
+    flex: 1; /* Меньше пространства для описания */
+    padding: 40px 30px;
+    background-color: #ffffff;
+}
+
+.description-header {
+    display: flex; /* Использует flexbox для расположения заголовка и кнопок в строку */
+    align-items: center; /* Выравнивает элементы по центру по вертикали */
+    margin-bottom: 24px;
+}
+
+.button-description {
+    background-color: #ffffff00;
+    color: #919191;
+    padding: 8px 16px;
+    border: 1px solid #919191;
+    border-radius: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.hidden {
+    display: none; /* Скрывает элемент */
+}
+
+.info-websites, .info-presentations {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-websites {
+    margin-bottom: 32px; /* Отступ между блоками сайтов и презентаций */
+}
+
+.info p16 {
+    margin-bottom: 8px; /* Отступ после заголовков разделов */
+}
+
