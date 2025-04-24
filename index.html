@@ -1,0 +1,200 @@
+<!DOCTYPE html> <!-- Определяет тип документа как HTML5 -->
+<html lang="ru"> <!-- Начало HTML-документа с указанием языка (русский) -->
+<head>
+    <meta charset="UTF-8"> <!-- Устанавливает кодировку документа на UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Настройки для адаптивного дизайна на мобильных устройствах -->
+    <title>Alex Maximov</title> <!-- Заголовок страницы, отображаемый в вкладке браузера -->
+    <link rel="stylesheet" href="style.css"> <!-- Подключение внешнего CSS-файла для стилизации страницы -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> <!-- Начало заголовка страницы -->
+        <div class="logo">
+            <a href="index.html" class="logo">
+                <img src="image/Logo.svg" alt="Логотип" />
+            </a>
+        </div> <!-- Блок для логотипа -->
+        <nav> <!-- Начало навигационного меню -->
+            <a href="#" class="menu-item" id="about-me-link">Обо мне</a> <!-- Добавляем id для ссылки -->
+        </nav> <!-- Конец навигационного меню -->
+    </header> <!-- Конец заголовка страницы -->
+
+    <div class="container"> <!-- Контейнер для меню и галереи -->
+        <div class="info-contacts"> <!-- Новый контейнер для информации и контактов -->
+            <div class="info"> <!-- Блок для информации -->
+                <h3>Работы</h3> <!-- Заголовок для информации -->
+                <div class="info-websites"> <!-- Новый блок для сайтов -->
+                    <div class="category">САЙТЫ</div>
+                    <a href="#" class="site-item" data-target="icl-services">ICL Services</a>
+                    <a href="#" class="site-item" data-target="gorizont">Горизонт покрытий</a>
+                    <a href="#" class="site-item" data-target="papper">Papper Planes</a>
+                    <a href="#" class="site-item" data-target="domrf">ДОМ.РФ</a>
+                </div>
+
+                <div class="info-presentations"> <!-- Новый блок для презентаций -->
+                    <div class="category">ПРЕЗЕНТАЦИИ</div>
+                    <a href="#" class="presentation-item" data-target="yandex">Яндекс Маркет</a>
+                    <a href="#" class="presentation-item" data-target="sber">Сбер</a>
+                    <a href="#" class="presentation-item" data-target="gazprom">Газпром нефть</a>
+                    <a href="#" class="presentation-item" data-target="alfabank">Альфа-Банк</a>
+                </div>
+            </div>
+
+            <div class="contacts"> <!-- Блок для контактов -->
+                <h3>Контакты</h3> <!-- Заголовок для контактов -->
+                <div class="social-media">
+                    <a href="https://t.me/your_telegram_link" class="social-media-item" data-front="Telegram" data-back="Перейти">
+                        Telegram
+                    </a>
+                    <a href="mailto:mailtomaximov@gmail.com" class="social-media-item" data-front="Email" data-back="Написать">
+                        Email
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контейнер "Обо мне" -->
+        <div class="about-me-container" id="about-me-container">
+            <div class="about-me-content">
+                <h1>Обо мне</h1>
+                <p18>Привет! Я Алексей Максимов — дизайнер интерфейсов с опытом более 7 лет.
+                    <br>Работаю в агентстве Papper Planes, создаю удобные и красивые сайты.</p18>
+            </div>
+        </div>
+
+        <!-- Добавляем новый контейнер для кейсов -->
+        <div class="cases-container">
+            <!-- Все gallery-description-container перемещаются сюда -->
+            <div class="gallery-description-container" id="icl-services"> <!-- Контейнер для ICL Services -->
+                <div class="gallery">
+                    <img src="image/ICL.png" alt="ICL Services" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>ICL Services</h1>
+                        <div>
+                            <button class="button-description">Landing page</button>
+                            <button class="button-description">Concept</button>
+                            <button class="button-description">SMM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-description-container" id="gorizont"> <!-- Контейнер для Горизонт покрытий -->
+                <div class="gallery">
+                    <img src="image/Gorizont.png" alt="Изображение Горизонт покрытий" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>Горизонт покрытий</h1>
+                        <div>
+                            <button class="button-description">Landing page</button>
+                            <button class="button-description">Concept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-description-container" id="papper"> <!-- Новый кейс Papper Planes -->
+                <div class="gallery">
+                    <img src="image/Papper.png" alt="Papper Planes" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>Papper Planes</h1>
+                        <div>
+                            <button class="button-description">Landing page</button>
+                            <button class="button-description">Design system</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-description-container" id="domrf"> <!-- Новый кейс ДОМ.РФ -->
+                <div class="gallery">
+                    <img src="image/DomRF.png" alt="ДОМ.РФ" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>ДОМ.РФ</h1>
+                        <div>
+                            <button class="button-description">Web App</button>
+                            <button class="button-description">UX/UI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кейс Яндекс Маркет -->
+            <div class="gallery-description-container" id="yandex">
+                <div class="gallery">
+                    <img src="image/Yandex.png" alt="Яндекс Маркет" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>Яндекс Маркет</h1>
+                        <div>
+                            <button class="button-description">Презентация</button>
+                            <button class="button-description">Pitch Deck</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кейс Сбер -->
+            <div class="gallery-description-container" id="sber">
+                <div class="gallery">
+                    <img src="image/Sber.png" alt="Сбер" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>Сбер</h1>
+                        <div>
+                            <button class="button-description">Презентация</button>
+                            <button class="button-description">Marketing Kit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кейс Газпром нефть -->
+            <div class="gallery-description-container" id="gazprom">
+                <div class="gallery">
+                    <img src="image/Gazprom.png" alt="Газпром нефть" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>Газпром нефть</h1>
+                        <div>
+                            <button class="button-description">Презентация</button>
+                            <button class="button-description">Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кейс Альфа-Банк -->
+            <div class="gallery-description-container" id="alfabank">
+                <div class="gallery">
+                    <img src="image/Alfa.png" alt="Альфа-Банк" />
+                </div>
+                <div class="description">
+                    <div class="description-header">
+                        <h1>Альфа-Банк</h1>
+                        <div>
+                            <button class="button-description">Презентация</button>
+                            <button class="button-description">Sales Deck</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script src="script.js"></script> <!-- Подключение внешнего JavaScript-файла для функциональности страницы -->
+</body>
+</html>
